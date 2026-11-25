@@ -1,37 +1,40 @@
-# Arista — Aria Naseri
+# Projektwerkstatt – 20 IT-Projekte
 
-A static portfolio of nine paintings and drawings, built with HTML, CSS, and JavaScript. No dependencies, external assets, or build step are required.
+Deutschsprachige Präsentation auf Grundlage von `Projektkatalog - 20 IT-Projekte.docx`.
 
-## Files
+Die 35 Folien stellen den gesamten Katalog vor: Einführung und Arbeitsplan, alle 20 Projektaufträge mit Pflichtumfang und Abnahmetests sowie Tests, Risiken, Kosten, Dokumentation und Abgabe. Die beiden umfangreichen FILIUS-Projekte erhalten jeweils zwei Folien. Ihre sechs Abnahmetests sind vollständig enthalten; die übrigen Projekte haben jeweils fünf.
 
-- `index.html`: homepage, artwork cards, and accessible full-size viewer.
-- `styles.css`: responsive gallery and visual styling.
-- `script.js`: painting/drawing filters and viewer controls. Without JavaScript, all artworks remain visible and image links open the full-size photos.
-- `assets/artworks/`: all nine permanently named JPEGs.
-- `data/artworks.json`: descriptive titles, image paths, descriptions, display dimensions, and original filename mapping. This is a reference catalogue; the site uses the static HTML, so update both when changing artwork details.
+Die im Katalog empfohlenen 6–8 Folien beziehen sich auf ein einzelnes Teilnehmerprojekt. Diese Datei ist eine Einführung in den gesamten Projektkatalog.
 
-Titles are descriptive working titles based on the supplied photographs. Dates, exact materials, and physical dimensions have not been assumed.
+## Dateien
 
-## Photo organization
+- `index.html`: Browser-Einstieg mit Titelvorschau und Downloads; keine externen Abhängigkeiten.
+- `projektkatalog-20-it-projekte.pptx`: editierbare PowerPoint-Präsentation im Format 16:9.
+- `projektkatalog-20-it-projekte.pdf`: PDF derselben 35 Folien.
+- `source/`: JavaScript-Quelldatei, Projektdaten, Hilfsfunktionen und festgeschriebene Node-Abhängigkeiten zur Neuerstellung.
 
-The temporary `works/` directory has been replaced by `assets/artworks/`. Four sideways photographs (Woman in Gold, Dance in Blue, Wolf and Rose, and Black Horse Study) have EXIF orientation tags so browsers display them upright. Their JPEG image data has not been recompressed or retouched. All paintings are shown in full, without cropping.
+Die PowerPoint-Notizen enthalten die zugehörigen Projektbeschreibungen aus der Quelle. Die Abnahmetests sind Anforderungen; es werden keine tatsächlich ausgeführten Teilnehmerprojekte oder Testergebnisse behauptet.
 
-The original uploads were backed up locally outside this repository in `/home/saeid/git/arista-artwork-originals/`. That backup is not needed to serve the website.
+## Bearbeiten
 
-## Preview locally
+Die PPTX lässt sich direkt in PowerPoint oder LibreOffice Impress bearbeiten. Verwendete Schrift: **DejaVu Sans**. Bei fehlender Schrift kann sich der Textumbruch ändern.
 
-Open `index.html` in a browser, or run:
+Für eine Neuerstellung mit Node.js (getestet mit Version 24):
 
 ```bash
-python3 -m http.server 8000
+cd source
+npm ci
+node build.js
 ```
 
-Then open http://localhost:8000.
+`build.js` erzeugt die PPTX im Ordner `source/`. Nach einer Änderung erneut rendern, das Layout prüfen und die fertige Datei in den übergeordneten Ordner kopieren. Unter Linux benötigt `skia-canvas` die üblichen Fontconfig-Bibliotheken.
 
-## Publish to GitHub Pages
+PDF mit installiertem LibreOffice exportieren:
 
-Repository: https://github.com/AriaNaseri/arista.github.io
+```bash
+libreoffice --headless --convert-to pdf --outdir .. projektkatalog-20-it-projekte.pptx
+```
 
-In Settings → Pages, choose **Deploy from a branch**, **main**, and **/ (root)**. Save. The site will be available at https://arianaseri.github.io/arista.github.io/ after a successful deployment.
+## Browser
 
-Commit and push the website files to publish changes. All asset URLs are relative, supporting the repository's URL path. The `.nojekyll` marker keeps the site buildless.
+`index.html` direkt öffnen oder das Repository mit einem statischen HTTP-Server bereitstellen. Alle Download- und Bildpfade sind relativ, sodass der Ordner auch unter einem GitHub-Pages-Unterpfad funktioniert.

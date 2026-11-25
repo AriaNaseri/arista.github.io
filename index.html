@@ -1,127 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arista — paintings and drawings by Aria Naseri. Explore expressive figures, dancing couples, animal studies, and portraiture.">
-  <meta name="theme-color" content="#f3ecdc">
-  <title>Arista | Aria Naseri — Paintings &amp; Drawings</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <meta name="description" content="Präsentation zur Projektwerkstatt: 20 IT-Projekte, fünf Fachbereiche und ein Arbeitsplan für fünf Tage.">
+  <meta name="theme-color" content="#152b3c">
+  <title>20 IT-Projekte · Projektwerkstatt</title>
+  <style>
+    :root{color-scheme:light;--ink:#152b3c;--paper:#f6f4ef;--teal:#096d72}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:17px/1.6 system-ui,sans-serif}
+    main,footer{width:min(1100px,90%);margin:auto}main{padding:3rem 0}header{max-width:850px;margin-bottom:2rem}
+    .eyebrow{color:var(--teal);font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;letter-spacing:-.04em;margin:.8rem 0 1.2rem}
+    p{max-width:780px}.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.8rem 0}
+    a{color:var(--teal);text-underline-offset:.2em}a:focus-visible{outline:3px solid #b9502c;outline-offset:5px}
+    .button{display:inline-block;border:1px solid var(--teal);border-radius:4px;padding:.7rem 1.1rem;font-weight:650;text-decoration:none}
+    .primary{background:var(--teal);color:white}.button:hover{box-shadow:0 0 0 2px var(--teal)}
+    .preview{display:block;border:1px solid #d5dcd9}.preview img{display:block;width:100%;height:auto}
+    .info{display:flex;gap:1rem 2rem;flex-wrap:wrap;padding:1.1rem 0;border-top:1px solid #d5dcd9;border-bottom:1px solid #d5dcd9;margin-bottom:2rem}
+    .info span{font-size:.95rem}.note{color:#52616c;font-size:.9rem}footer{padding:1.5rem 0 2rem;border-top:1px solid #d5dcd9;font-size:.9rem}
+    @media(max-width:600px){main{padding-top:1.5rem}.preview{margin-top:1rem}}
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="wordmark" href="./" aria-label="Arista home">Arista<span>.</span></a>
-    <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#about">About</a></nav>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="title">
-      <div class="hero-copy">
-        <p class="eyebrow">Aria Naseri · Paintings &amp; drawings</p>
-        <h1 id="title">Stories in<br><em>colour.</em></h1>
-        <p class="intro">Figures in motion. Quiet moments. A world imagined through colour, line, and feeling.</p>
-        <a class="text-link" href="#work">Explore the collection</a>
-        <div class="hero-note"><span>A selection of nine works</span><span>Painting &amp; portraiture</span></div>
-      </div>
-      <figure class="hero-artwork">
-        <a href="assets/artworks/dancer-in-yellow.jpg" data-artwork="dancer-in-yellow" aria-label="View Iran">
-          <img src="assets/artworks/dancer-in-yellow.jpg" alt="A dancing figure with flowing pale hair and a sweeping yellow skirt against a deep red background." width="960" height="1280" fetchpriority="high" decoding="async">
-        </a>
-        <figcaption><span>Iran</span><span>Selected painting</span></figcaption>
-      </figure>
-    </section>
-    <section id="work" class="section" aria-labelledby="work-title">
-      <p class="eyebrow">The collection</p>
-      <div class="section-heading"><h2 id="work-title">Selected work</h2><p>A closer look at colour, character, and movement.</p></div>
-      <div class="gallery-toolbar" hidden>
-        <div class="filters" role="group" aria-label="Filter artworks">
-          <button type="button" data-filter="all" aria-pressed="true">All work <span>9</span></button>
-          <button type="button" data-filter="painting" aria-pressed="false">Paintings <span>8</span></button>
-          <button type="button" data-filter="drawing" aria-pressed="false">Drawings <span>1</span></button>
-        </div>
-        <p id="gallery-status" class="gallery-status" role="status">Showing all 9 works</p>
-      </div>
-      <div class="gallery">
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/dancer-in-yellow.jpg" data-artwork="dancer-in-yellow" aria-label="View Iran">
-            <img src="assets/artworks/dancer-in-yellow.jpg" alt="A dancing figure with flowing pale hair and a sweeping yellow skirt against a deep red background." width="960" height="1280" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Iran</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/dance-in-red.jpg" data-artwork="dance-in-red" aria-label="View Dance in Red">
-            <img src="assets/artworks/dance-in-red.jpg" alt="A dancing couple, the woman in a red skirt and heels, surrounded by loose red and charcoal brushwork." width="1280" height="960" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Dance in Red</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/black-horse-at-sunset.jpg" data-artwork="black-horse-at-sunset" aria-label="View Black Horse at Sunset">
-            <img src="assets/artworks/black-horse-at-sunset.jpg" alt="A rearing black horse with a flowing mane against a warm coral and orange sky." width="960" height="1280" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Black Horse at Sunset</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/woman-in-gold.jpg" data-artwork="woman-in-gold" aria-label="View Woman in Gold">
-            <img src="assets/artworks/woman-in-gold.jpg" alt="A golden figure with flowing hair and outstretched arms against a muted blue background." width="960" height="1280" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Woman in Gold</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/dance-in-blue.jpg" data-artwork="dance-in-blue" aria-label="View Dance in Blue">
-            <img src="assets/artworks/dance-in-blue.jpg" alt="A dancing couple in a close embrace surrounded by expressive blue, yellow, and white brushstrokes." width="960" height="1280" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Dance in Blue</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/wolf-and-rose.jpg" data-artwork="wolf-and-rose" aria-label="View Wolf and Rose">
-            <img src="assets/artworks/wolf-and-rose.jpg" alt="A grey and white wolf with green eyes holding a red rose, with a golden moon behind it." width="1280" height="960" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Wolf and Rose</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/behind-the-curtain.jpg" data-artwork="behind-the-curtain" aria-label="View Behind the Curtain">
-            <img src="assets/artworks/behind-the-curtain.jpg" alt="A monochrome seated figure framed by long draped curtains." width="1280" height="1278" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Behind the Curtain</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="painting">
-          <a class="work-image" href="assets/artworks/black-horse-study.jpg" data-artwork="black-horse-study" aria-label="View Black Horse Study">
-            <img src="assets/artworks/black-horse-study.jpg" alt="An expressive black horse with pale highlights against a warm pink background." width="1280" height="960" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Black Horse Study</h3><span>Painting</span></div>
-        </article>
-        <article class="work-card" data-category="drawing">
-          <a class="work-image" href="assets/artworks/portrait-in-a-hat.jpg" data-artwork="portrait-in-a-hat" aria-label="View Portrait in a Hat">
-            <img src="assets/artworks/portrait-in-a-hat.jpg" alt="A seated man in a brimmed hat and coat, drawn in fine pale lines on dark sketchbook paper." width="720" height="1280" loading="lazy" decoding="async">
-            <span class="image-action" aria-hidden="true">View artwork</span>
-          </a>
-          <div class="work-caption"><h3>Portrait in a Hat</h3><span>Drawing</span></div>
-        </article>
-      </div>
-    </section>
-    <section id="about" class="section about" aria-labelledby="about-title">
-      <div><p class="eyebrow">Behind the work</p><h2 id="about-title">An eye for<br><em>expression.</em></h2></div>
-      <div class="about-copy"><p>Arista brings together paintings and drawings by Aria Naseri, moving between expressive figures, dancing couples, animal studies, and portraiture.</p><p>Rich reds, luminous yellows, and deep blues sit alongside quieter monochrome studies. Across the collection, gesture and contrast give each subject its own character.</p><a class="text-link" href="#work">Return to the collection</a></div>
-    </section>
+  <main>
+    <header>
+      <p class="eyebrow">Projektwerkstatt · Vorbereitung auf die Umschulung</p>
+      <h1>20 IT-Projekte für den Einstieg</h1>
+      <p>Die Übersicht zum Projektkatalog: Python, Webentwicklung, FILIUS, Kundensupport und IT-Sicherheit. Mit Pflichtfunktionen, Abnahmetests und Hinweisen zu Planung, Dokumentation und Präsentation.</p>
+    </header>
+    <div class="info" aria-label="Inhalt der Präsentation"><span><strong>35</strong> Folien</span><span><strong>20</strong> Projektaufträge</span><span><strong>5</strong> Fachbereiche</span><span>Sprache: <strong>Deutsch</strong></span></div>
+    <nav class="actions" aria-label="Präsentation öffnen oder herunterladen">
+      <a class="button primary" href="projektkatalog-20-it-projekte.pptx" download>PowerPoint herunterladen</a>
+      <a class="button" href="projektkatalog-20-it-projekte.pdf">PDF öffnen</a>
+      <a class="button" href="projektkatalog-20-it-projekte.pdf" download>PDF herunterladen</a>
+    </nav>
+    <a class="preview" href="projektkatalog-20-it-projekte.pdf" aria-label="Präsentation als PDF öffnen">
+      <img src="cover.png" width="1600" height="900" alt="Titelfolie: 20 IT-Projekte für den Einstieg. Fünf Fachbereiche, vier Arbeitstage und ein Präsentationstag, 20 konkrete Projektaufträge.">
+    </a>
+    <p class="note">Grundlage: „Projektkatalog - 20 IT-Projekte.docx“. Die Übersicht stellt den gesamten Katalog vor. Die Empfehlung von 6–8 Folien im Katalog gilt für die spätere Präsentation eines einzelnen Teilnehmerprojekts.</p>
   </main>
-  <footer><a class="wordmark" href="./">Arista<span>.</span></a><span>Aria Naseri · Paintings &amp; drawings</span><a href="#main">Back to top</a></footer>
-  <dialog id="artwork-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-description">
-    <div class="viewer-layout">
-      <div class="viewer-topbar"><span id="viewer-counter"></span><button type="button" id="viewer-close" autofocus>Close</button></div>
-      <div class="viewer-image-wrap"><img id="viewer-image" alt=""></div>
-      <div class="viewer-caption"><div><p class="eyebrow" id="viewer-category"></p><h2 id="viewer-title"></h2><p id="viewer-description"></p></div><div class="viewer-navigation"><button type="button" id="viewer-previous">Previous</button><button type="button" id="viewer-next">Next</button></div></div>
-      <p class="viewer-help">Use the left and right arrow keys to browse. Press Escape to close.</p>
-    </div>
-  </dialog>
+  <footer><a href="../">Zur Website</a> · <a href="README.md">Dateien und Bearbeitung</a></footer>
 </body>
 </html>
