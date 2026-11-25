@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "dancer-in-yellow",
+    "title": "Dancer in Yellow",
+    "category": "Painting",
+    "description": "A dancing figure with flowing pale hair and a sweeping yellow skirt against a deep red background.",
+    "image": "assets/artworks/dancer-in-yellow.jpg",
+    "width": 960,
+    "height": 1280,
+    "original": "photo_5204089827232521787_y.jpg",
+    "orientation": 1
+  },
+  {
+    "slug": "dance-in-red",
+    "title": "Dance in Red",
+    "category": "Painting",
+    "description": "A dancing couple, the woman in a red skirt and heels, surrounded by loose red and charcoal brushwork.",
+    "image": "assets/artworks/dance-in-red.jpg",
+    "width": 1280,
+    "height": 960,
+    "original": "photo_5204089827232521784_y.jpg",
+    "orientation": 1
+  },
+  {
+    "slug": "black-horse-at-sunset",
+    "title": "Black Horse at Sunset",
+    "category": "Painting",
+    "description": "A rearing black horse with a flowing mane against a warm coral and orange sky.",
+    "image": "assets/artworks/black-horse-at-sunset.jpg",
+    "width": 960,
+    "height": 1280,
+    "original": "photo_5204089827232521789_y.jpg",
+    "orientation": 1
+  },
+  {
+    "slug": "woman-in-gold",
+    "title": "Woman in Gold",
+    "category": "Painting",
+    "description": "A golden figure with flowing hair and outstretched arms against a muted blue background.",
+    "image": "assets/artworks/woman-in-gold.jpg",
+    "width": 960,
+    "height": 1280,
+    "original": "photo_5204089827232521783_y.jpg",
+    "orientation": 6
+  },
+  {
+    "slug": "dance-in-blue",
+    "title": "Dance in Blue",
+    "category": "Painting",
+    "description": "A dancing couple in a close embrace surrounded by expressive blue, yellow, and white brushstrokes.",
+    "image": "assets/artworks/dance-in-blue.jpg",
+    "width": 960,
+    "height": 1280,
+    "original": "photo_5204089827232521790_y.jpg",
+    "orientation": 8
+  },
+  {
+    "slug": "wolf-and-rose",
+    "title": "Wolf and Rose",
+    "category": "Painting",
+    "description": "A grey and white wolf with green eyes holding a red rose, with a golden moon behind it.",
+    "image": "assets/artworks/wolf-and-rose.jpg",
+    "width": 1280,
+    "height": 960,
+    "original": "photo_5204089827232521788_y.jpg",
+    "orientation": 6
+  },
+  {
+    "slug": "behind-the-curtain",
+    "title": "Behind the Curtain",
+    "category": "Painting",
+    "description": "A monochrome seated figure framed by long draped curtains.",
+    "image": "assets/artworks/behind-the-curtain.jpg",
+    "width": 1280,
+    "height": 1278,
+    "original": "photo_5204089827232521785_y.jpg",
+    "orientation": 1
+  },
+  {
+    "slug": "black-horse-study",
+    "title": "Black Horse Study",
+    "category": "Painting",
+    "description": "An expressive black horse with pale highlights against a warm pink background.",
+    "image": "assets/artworks/black-horse-study.jpg",
+    "width": 1280,
+    "height": 960,
+    "original": "photo_5204089827232521786_y.jpg",
+    "orientation": 8
+  },
+  {
+    "slug": "portrait-in-a-hat",
+    "title": "Portrait in a Hat",
+    "category": "Drawing",
+    "description": "A seated man in a brimmed hat and coat, drawn in fine pale lines on dark sketchbook paper.",
+    "image": "assets/artworks/portrait-in-a-hat.jpg",
+    "width": 720,
+    "height": 1280,
+    "original": "photo_5204089827232521781_y.jpg",
+    "orientation": 1
+  }
+]
